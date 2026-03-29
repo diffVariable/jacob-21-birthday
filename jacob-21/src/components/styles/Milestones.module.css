@@ -1,0 +1,73 @@
+.section {
+  padding: 2rem 1.5rem;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.milestone {
+  display: flex;
+  gap: clamp(10px, 3vw, 14px);
+  padding-bottom: 1.5rem;
+}
+
+.milestone:last-child {
+  padding-bottom: 0;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: clamp(44px, 13vw, 56px);
+}
+
+.year {
+  background: var(--blue);
+  color: var(--yellow);
+  font-size: clamp(9px, 2.5vw, 11px);
+  font-weight: 700;
+  font-family: "Playpen Sans", cursive;
+  padding: 4px 6px;
+  border-radius: 20px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.line {
+  width: 2px;
+  flex: 1;
+  background: var(--yellow);
+  margin-top: 6px;
+  min-height: 28px;
+}
+
+.card {
+  background: #fff;
+  border: 2px solid var(--yellow);
+  border-radius: 14px;
+  padding: clamp(10px, 3vw, 12px) clamp(10px, 3vw, 14px);
+  flex: 1;
+  min-width: 0;
+}
+
+.icon {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.title {
+  font-size: clamp(13px, 3.5vw, 14px);
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 2px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.desc {
+  font-size: clamp(11px, 3vw, 13px);
+  color: var(--muted);
+  line-height: 1.5;
+}

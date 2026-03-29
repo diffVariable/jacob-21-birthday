@@ -1,0 +1,70 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.error {
+  font-size: 13px;
+  color: var(--red);
+  background: var(--red-light);
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.submitBtn {
+  background: var(--blue);
+  color: var(--yellow);
+  border: none;
+  border-radius: 50px;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "Quicksand", sans-serif;
+  transition:
+    transform 0.15s,
+    opacity 0.15s;
+  margin-top: 4px;
+}
+
+.submitBtn:hover:not(:disabled) {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.submitBtn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.success {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.successIcon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.successTitle {
+  font-family: "Playpen Sans", cursive;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+
+.successSub {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}

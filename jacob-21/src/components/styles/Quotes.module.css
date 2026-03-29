@@ -1,0 +1,33 @@
+.section {
+  padding: 2rem 1.5rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.25rem;
+  border-left: 5px solid var(--yellow);
+}
+
+.text {
+  font-size: 15px;
+  color: var(--blue);
+  font-style: italic;
+  line-height: 1.7;
+  font-family: "Quicksand", sans-serif;
+}
+
+.from {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--muted);
+  margin-top: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}

@@ -1,0 +1,32 @@
+.hero {
+  background: var(--blue);
+  padding: clamp(2rem, 8vw, 3rem) 1.5rem;
+  text-align: center;
+}
+
+.paws {
+  font-size: clamp(20px, 6vw, 26px);
+  letter-spacing: 6px;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-family: "Playpen Sans", cursive;
+  font-size: clamp(28px, 10vw, 38px);
+  font-weight: 700;
+  color: var(--yellow);
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.name {
+  color: #fff;
+}
+
+.sub {
+  font-size: clamp(13px, 3.5vw, 15px);
+  color: #c5cae9;
+  line-height: 1.7;
+  max-width: 320px;
+  margin: 0 auto;
+}

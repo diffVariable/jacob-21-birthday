@@ -1,0 +1,61 @@
+.hint {
+  background: #fffde7;
+  border: 2px dashed var(--yellow);
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin-bottom: 1.25rem;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.hintIcon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.hintText {
+  font-size: clamp(12px, 3.5vw, 13px);
+  color: var(--blue);
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+@media (max-width: 320px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: #fff;
+  border: 2px solid var(--yellow);
+  border-radius: 14px;
+  padding: clamp(10px, 3vw, 14px) clamp(8px, 2.5vw, 12px);
+  text-align: center;
+}
+
+.icon {
+  font-size: clamp(22px, 7vw, 28px);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.name {
+  font-size: clamp(12px, 3.5vw, 13px);
+  font-weight: 700;
+  color: var(--blue);
+  font-family: "Quicksand", sans-serif;
+  margin-bottom: 2px;
+}
+
+.desc {
+  font-size: clamp(10px, 2.8vw, 11px);
+  color: var(--muted);
+  line-height: 1.4;
+}
