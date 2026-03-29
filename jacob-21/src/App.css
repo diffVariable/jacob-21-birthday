@@ -48,7 +48,6 @@ body {
 @media (max-width: 768px) {
   .main-content-container {
     flex-direction: column;
-    min-height: 100%;
   }
 }
 
@@ -79,7 +78,6 @@ body {
   margin-bottom: 1.25rem;
 }
 
-/* New section label — A+B mix */
 .sec-label-wrap {
   border-left: 3px solid var(--yellow);
   padding-left: 14px;

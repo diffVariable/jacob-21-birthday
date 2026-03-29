@@ -27,7 +27,7 @@ const FAVORITES: FavoriteThing[] = [
       "Pizza, pasta, burgers — you name it, Jacob loves it. He's not picky when it comes to food, as long as it's delicious!",
   },
   {
-    icon: "🎵",
+    icon: "🫂",
     name: "Your Company",
     description:
       "Honestly, Jacob's favorite thing is just being around the people he loves. So if you're coming to celebrate, know that your presence is the best gift of all!",

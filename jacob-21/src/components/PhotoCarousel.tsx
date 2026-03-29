@@ -19,6 +19,11 @@ export default function PhotoCarousel() {
     "adventure/adventure14.jpg",
     "adventure/adventure15.jpg",
     "adventure/adventure16.jpg",
+    "adventure/adventure17.jpg",
+    "adventure/adventure18.jpg",
+    "adventure/adventure19.jpg",
+    "adventure/adventure20.jpg",
+    "adventure/adventure21.jpeg",
   ];
   return (
     <section className="section">

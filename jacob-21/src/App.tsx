@@ -6,12 +6,12 @@ import Countdown from "./components/Countdown";
 import Hero from "./components/Hero";
 import PhotoCarousel from "./components/PhotoCarousel";
 import FavoriteThings from "./components/FavoriteThings";
-import Quotes from "./components/Quotes";
 import RSVPForm from "./components/RSVPForm";
 import SupportItsMe from "./components/SupportItsMe";
 import FunFacts from "./components/Funfacts";
 import JacobTaughtUs from "./components/TaughtUs";
 import SelfieGrid from "./components/SelfieGrid";
+import SectionLabel from "./components/common/SectionLabel";
 
 export default function App() {
   const [revealed, setRevealed] = useState(false);
@@ -58,7 +58,7 @@ export default function App() {
             <SupportItsMe />
             <div className="divider" />
             <section className="rsvp-wrap">
-              <div className="sec-label">🎉 Will You Be There?</div>
+              <SectionLabel eyebrow="RSVP" title="Will You Be There?" />
               <div className="rsvp-inner">
                 <RSVPForm />
               </div>

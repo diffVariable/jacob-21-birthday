@@ -70,7 +70,7 @@ export default function Countdown() {
   return (
     <section className={styles.wrap}>
       <div className={styles.inner}>
-        <div className="sec-label">⏰ The Party Starts In</div>
+        <div className="sec-label">The Party Starts In</div>
 
         {isOver ? (
           <motion.p
@@ -92,6 +92,7 @@ export default function Countdown() {
               <span className={styles.sep}>:</span>
               <CountUnit value={timeLeft.seconds} label="Seconds" />
             </div>
+            <p className={styles.date}> Velocity Fitness PH</p>
             <p className={styles.date}> July 29, 2026 · 3:00 PM</p>
             <motion.button
               className={styles.scrollBtn}

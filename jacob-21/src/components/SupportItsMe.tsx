@@ -9,17 +9,15 @@ export default function SupportBrand() {
     "itsme/itsme4.png",
     "itsme/itsme5.png",
     "itsme/itsme6.png",
-    "itsme/itsme7.png",
     "itsme/itsme8.png",
     "itsme/itsme9.png",
+    "itsme/itsme10.png",
   ];
   return (
     <section className={styles.wrap}>
       <div className={styles.inner}>
         <div className={styles.textBox}>
-          <div className={`sec-label ${styles.pill}`}>
-            ❤️ Support Jacob's Dream
-          </div>
+          <div className="sec-label">Support Jacob's Dream</div>
           <h2 className={styles.title}>It's Me Apparel PH</h2>
           <p className={styles.desc}>
             Jacob runs his own apparel brand celebrating autism awareness and

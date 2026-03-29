@@ -9,6 +9,13 @@
   flex-direction: row;
 }
 
+@media (max-width: 768px) {
+  .inner {
+    gap: 20px;
+    flex-direction: column;
+  }
+}
+
 .textBox {
   flex: 1;
   align-content: center;
