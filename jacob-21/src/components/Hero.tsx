@@ -8,6 +8,11 @@ export default function Hero() {
   return (
     <section className={styles.hero}>
       <div className={styles.inner}>
+        <h1 className={styles.title}>
+          Happy 21st,
+          <br />
+          <span className={styles.name}>Jacob!</span>
+        </h1>
         <div className={styles.pics}>
           <motion.span
             initial={{ opacity: 0, y: 10 }}
@@ -31,11 +36,7 @@ export default function Hero() {
             <img src={jacobPic3} alt="Jacob 3" className={styles.jacobPic} />
           </motion.span>
         </div>
-        <h1 className={styles.title}>
-          Happy 21st,
-          <br />
-          <span className={styles.name}>Jacob!</span>
-        </h1>
+
         <p className={styles.sub}>You are so loved. Come celebrate with us!</p>
       </div>
     </section>

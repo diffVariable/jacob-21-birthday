@@ -5,7 +5,7 @@ export default function PhotoCarousel() {
   const PHOTOS = [
     "adventure/adventure1.jpg",
     "adventure/adventure2.jpg",
-    "adventure/adventure3.jpg",
+    "adventure/adventure3.jpeg",
     "adventure/adventure4.jpg",
     "adventure/adventure5.jpg",
     "adventure/adventure6.jpg",
