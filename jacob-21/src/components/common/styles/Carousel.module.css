@@ -1,0 +1,101 @@
+.carouselWrap {
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--blue-light);
+  position: relative;
+}
+
+.track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.slide {
+  min-width: 100%;
+  height: clamp(160px, 50vw, 220px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--blue-light);
+}
+
+.slide:nth-child(odd) {
+  background: #fffde7;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholderIcon {
+  font-size: clamp(28px, 8vw, 36px);
+}
+
+.placeholderLabel {
+  font-family: "Playpen Sans", cursive;
+  font-size: clamp(12px, 3.5vw, 14px);
+  font-weight: 700;
+  color: var(--blue);
+}
+
+.placeholderSub {
+  font-size: clamp(10px, 2.5vw, 11px);
+  color: var(--muted);
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--yellow);
+  border: none;
+  border-radius: 50%;
+  width: clamp(28px, 8vw, 34px);
+  height: clamp(28px, 8vw, 34px);
+  font-size: clamp(12px, 4vw, 15px);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  color: var(--blue);
+  transition: opacity 0.15s;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.prev {
+  left: 8px;
+}
+.next {
+  right: 8px;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--beige-dark);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s;
+}
+
+.dot.active {
+  background: var(--blue);
+}

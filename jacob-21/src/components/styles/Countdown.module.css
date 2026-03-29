@@ -2,6 +2,8 @@
   padding: 2rem 1.5rem;
   background: var(--blue);
   text-align: center;
+  align-content: center;
+  width: 100%;
 }
 
 .wrap .sec-label {
@@ -76,4 +78,26 @@
   font-weight: 700;
   color: var(--yellow);
   padding: 1rem 0;
+}
+
+.scrollBtn {
+  margin-top: 2rem;
+  background: transparent;
+  border: 2px solid var(--yellow);
+  color: var(--yellow);
+  font-size: 22px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  transition: background 0.2s;
+}
+
+.scrollBtn:hover {
+  background: rgba(255, 213, 79, 0.15);
 }

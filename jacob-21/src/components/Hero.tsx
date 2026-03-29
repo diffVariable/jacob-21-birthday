@@ -11,7 +11,8 @@ export default function Hero() {
           <span className={styles.name}>Jacob!</span>
         </h1>
         <p className={styles.sub}>
-          You are so loved. Come celebrate with us —<br />
+          You are so loved. Come celebrate with us!
+          <br />
           Gus and Umi are already so excited. 💛
         </p>
       </div>

@@ -34,9 +34,16 @@ export default function App() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
           >
-            <Hero />
-            <div className="divider" />
-            <Countdown />
+            <motion.div
+              className="main-content-container"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+            >
+              <Hero />
+              <Countdown />
+            </motion.div>
+
             <div className="divider" />
             <PhotoCarousel />
             <div className="divider-thin" />

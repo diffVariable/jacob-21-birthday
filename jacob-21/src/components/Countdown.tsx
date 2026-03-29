@@ -55,6 +55,10 @@ export default function Countdown() {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>(getTimeLeft);
   const isOver = PARTY_DATE.getTime() <= Date.now();
 
+  const scrollDown = () => {
+    window.scrollBy({ top: window.innerHeight, behavior: "smooth" });
+  };
+
   useEffect(() => {
     if (isOver) return;
     const interval = setInterval(() => {
@@ -64,12 +68,7 @@ export default function Countdown() {
   }, [isOver]);
 
   return (
-    <motion.section
-      className={styles.wrap}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: 0.2 }}
-    >
+    <section className={styles.wrap}>
       <div className={styles.inner}>
         <div className="sec-label">⏰ The Party Starts In</div>
 
@@ -94,9 +93,24 @@ export default function Countdown() {
               <CountUnit value={timeLeft.seconds} label="Seconds" />
             </div>
             <p className={styles.date}>📅 July 29, 2026 · 3:00 PM</p>
+            <motion.button
+              className={styles.scrollBtn}
+              onClick={scrollDown}
+              animate={{ y: [0, 8, 0] }}
+              transition={{
+                repeat: Infinity,
+                duration: 1.4,
+                ease: "easeInOut",
+              }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              aria-label="Scroll down"
+            >
+              ↓
+            </motion.button>
           </>
         )}
       </div>
-    </motion.section>
+    </section>
   );
 }
