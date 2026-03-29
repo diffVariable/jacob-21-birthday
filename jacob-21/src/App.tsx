@@ -9,6 +9,9 @@ import FavoriteThings from "./components/FavoriteThings";
 import Quotes from "./components/Quotes";
 import RSVPForm from "./components/RSVPForm";
 import SupportItsMe from "./components/SupportItsMe";
+import FunFacts from "./components/Funfacts";
+import JacobTaughtUs from "./components/TaughtUs";
+import SelfieGrid from "./components/SelfieGrid";
 
 export default function App() {
   const [revealed, setRevealed] = useState(false);
@@ -46,9 +49,11 @@ export default function App() {
             <div className="divider" />
             <PhotoCarousel />
             <div className="divider-thin" />
+            <FunFacts />
+            <div className="divider-thin" />
             <FavoriteThings />
-            <div className="divider" />
-            <Quotes />
+            <div className="divider-thin" />
+            <JacobTaughtUs />
             <div className="divider" />
             <SupportItsMe />
             <div className="divider" />
@@ -58,6 +63,8 @@ export default function App() {
                 <RSVPForm />
               </div>
             </section>
+            <div className="divider" />
+            <SelfieGrid />
           </motion.main>
         )}
       </AnimatePresence>

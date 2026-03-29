@@ -1,36 +1,33 @@
 import { useState } from "react";
 import styles from "./styles/Carousel.module.css";
-
-const PHOTO_COUNT = 5;
+import { storageUrl } from "../../lib/supabase";
 
 interface ICarouselProps {
-  photos?: string[]; //photo url
+  photos: string[]; //photo urls
 }
 const Carousel = ({ photos }: ICarouselProps) => {
   const [current, setCurrent] = useState(0);
 
+  const PHOTO_COUNT = photos.length;
   const goTo = (index: number) => {
     setCurrent((index + PHOTO_COUNT) % PHOTO_COUNT);
   };
 
   return (
     <>
-      {" "}
       <div className={styles.carouselWrap}>
         <div
           className={styles.track}
           style={{ transform: `translateX(-${current * 100}%)` }}
         >
-          {Array.from({ length: PHOTO_COUNT }).map((_, i) => (
+          {photos?.map((photo, i) => (
             <div key={i} className={styles.slide}>
-              {/* TODO: Replace this placeholder with real photo
-              <img src={photos?.[i] || ""} alt={`Memory ${i + 1}`} className={styles.photo} />
-              */}
-              <span className={styles.placeholderIcon}>📷</span>
-              <p className={styles.placeholderLabel}>Photo {i + 1}</p>
-              <p className={styles.placeholderSub}>
-                Replace with a real photo of Jacob
-              </p>
+              <img
+                src={storageUrl(photo)}
+                alt={`Memory ${i + 1}`}
+                className={styles.photo}
+                loading="lazy"
+              />
             </div>
           ))}
         </div>

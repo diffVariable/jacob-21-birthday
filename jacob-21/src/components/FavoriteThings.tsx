@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import styles from "./styles/FavoriteThings.module.css";
+import SectionLabel from "./common/SectionLabel";
 
 interface FavoriteThing {
   icon: string;
@@ -7,7 +8,6 @@ interface FavoriteThing {
   description: string;
 }
 
-// TODO: Replace with Jacob's real favorites!
 const FAVORITES: FavoriteThing[] = [
   {
     icon: "🧸",
@@ -16,25 +16,28 @@ const FAVORITES: FavoriteThing[] = [
   },
   {
     icon: "🎮",
-    name: "Favorite Thing 2",
-    description: "Replace with something Jacob loves",
+    name: "Anything Disney or Nickelodeon",
+    description:
+      "From toys to clothes, if it's Disney or Nick, Jacob is all in.",
   },
   {
     icon: "🍕",
-    name: "Favorite Thing 3",
-    description: "Replace with something Jacob loves",
+    name: "Food",
+    description:
+      "Pizza, pasta, burgers — you name it, Jacob loves it. He's not picky when it comes to food, as long as it's delicious!",
   },
   {
     icon: "🎵",
-    name: "Favorite Thing 4",
-    description: "Replace with something Jacob loves",
+    name: "Your Company",
+    description:
+      "Honestly, Jacob's favorite thing is just being around the people he loves. So if you're coming to celebrate, know that your presence is the best gift of all!",
   },
 ];
 
 export default function FavoriteThings() {
   return (
     <section className="section">
-      <div className="sec-label">🎁 Jacob's Favorite Things</div>
+      <SectionLabel eyebrow="Gift Ideas" title="Jacob's Favorite Things" />
 
       <div className={styles.hint}>
         <span className={styles.hintIcon}>💡</span>

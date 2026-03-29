@@ -1,0 +1,42 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.card {
+  background: #fff;
+  border: 2px solid var(--yellow);
+  border-radius: 16px;
+  padding: 1.1rem 1rem;
+  flex: 1 1 calc(50% - 6px);
+  min-width: 140px;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .card {
+    flex: 1 1 calc(25% - 9px);
+  }
+}
+
+.icon {
+  font-size: clamp(24px, 6vw, 30px);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.fact {
+  font-size: clamp(12px, 3vw, 13px);
+  font-weight: 700;
+  color: var(--blue);
+  font-family: "Quicksand", sans-serif;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.desc {
+  font-size: clamp(10px, 2.5vw, 11px);
+  color: var(--muted);
+  line-height: 1.5;
+}
