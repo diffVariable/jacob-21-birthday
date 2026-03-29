@@ -26,8 +26,20 @@
 }
 
 .photo {
+  width: 100%;
   height: calc(100vh - 148px);
-  object-fit: cover;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .slide {
+    height: 280px;
+  }
+
+  .photo {
+    height: 280px;
+    object-fit: contain;
+  }
 }
 
 .btn {

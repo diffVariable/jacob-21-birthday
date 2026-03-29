@@ -29,7 +29,7 @@ export default function SupportBrand() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Visit It's Me Apparel PH 🐾
+            Visit It's Me Apparel PH ↗
           </a>
         </div>
         <div className={styles.photoGrid}>

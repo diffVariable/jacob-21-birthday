@@ -4,6 +4,7 @@ import styles from "./styles/Splash.module.css";
 import umiPic from "../assets/umi.png";
 import gusPic from "../assets/gus.png";
 import gusUmiAwakePic from "../assets/gusUmiAwake.jpg";
+import confetti from "canvas-confetti";
 
 interface SplashProps {
   onReveal: () => void;
@@ -19,6 +20,12 @@ export default function Splash({ onReveal }: SplashProps) {
       setStep("wakingUp");
       setTimeout(() => setStep("awake"), 1800);
     } else if (step === "awake") {
+      confetti({
+        particleCount: 200,
+        spread: 120,
+        origin: { y: 0.5 },
+        colors: ["#ffd54f", "#1a237e", "#f5e1da", "#ffffff"],
+      });
       onReveal();
     }
   };

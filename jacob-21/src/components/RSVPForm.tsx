@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "./styles/RSVPForm.module.css";
 
 export default function RSVPForm() {
   const [form, setForm] = useState({
@@ -88,7 +89,7 @@ export default function RSVPForm() {
           onChange={(e) => setForm({ ...form, message: e.target.value })}
         />
       </div>
-      <button onClick={handleSubmit} disabled={loading}>
+      <button onClick={handleSubmit} disabled={loading} className={styles.btn}>
         {loading ? "Sending... 🐾" : "Send My RSVP 🐾"}
       </button>
     </div>

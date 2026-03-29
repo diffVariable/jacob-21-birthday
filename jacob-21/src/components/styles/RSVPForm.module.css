@@ -19,6 +19,22 @@
   font-family: "Quicksand", sans-serif;
 }
 
+.btn {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--blue);
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Quicksand", sans-serif;
+  padding: 12px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
 .submitBtn {
   background: var(--blue);
   color: var(--yellow);
