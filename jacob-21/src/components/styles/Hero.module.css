@@ -5,13 +5,6 @@
   width: 100%;
   align-content: center;
 }
-
-.paws {
-  font-size: clamp(20px, 6vw, 26px);
-  letter-spacing: 6px;
-  margin-bottom: 1rem;
-}
-
 .title {
   font-family: "Playpen Sans", cursive;
   font-size: clamp(32px, 10vw, 85px);
@@ -31,4 +24,16 @@
   line-height: 1.7;
   max-width: 350px;
   margin: 0 auto;
+}
+
+.pics {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  justify-content: center;
+  margin-bottom: 2px;
+}
+
+.jacobPic {
+  width: 60px;
 }

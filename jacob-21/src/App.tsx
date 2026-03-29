@@ -6,7 +6,6 @@ import Countdown from "./components/Countdown";
 import Hero from "./components/Hero";
 import PhotoCarousel from "./components/PhotoCarousel";
 import FavoriteThings from "./components/FavoriteThings";
-import Milestones from "./components/Milestones";
 import Quotes from "./components/Quotes";
 import RSVPForm from "./components/RSVPForm";
 import SupportItsMe from "./components/SupportItsMe";
@@ -47,8 +46,6 @@ export default function App() {
             <div className="divider" />
             <PhotoCarousel />
             <div className="divider-thin" />
-            <Milestones />
-            <div className="divider-thin" />
             <FavoriteThings />
             <div className="divider" />
             <Quotes />
@@ -61,9 +58,6 @@ export default function App() {
                 <RSVPForm />
               </div>
             </section>
-            <footer className="footer">
-              Made With 💛 By Diana, For Jacob's 21st 🐾
-            </footer>
           </motion.main>
         )}
       </AnimatePresence>
