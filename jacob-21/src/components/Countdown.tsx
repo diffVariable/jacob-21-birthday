@@ -92,7 +92,7 @@ export default function Countdown() {
               <span className={styles.sep}>:</span>
               <CountUnit value={timeLeft.seconds} label="Seconds" />
             </div>
-            <p className={styles.date}>📅 July 29, 2026 · 3:00 PM</p>
+            <p className={styles.date}>July 29, 2026 · 3:00 PM</p>
             <motion.button
               className={styles.scrollBtn}
               onClick={scrollDown}
