@@ -12,6 +12,7 @@ import FunFacts from "./components/Funfacts";
 import JacobTaughtUs from "./components/TaughtUs";
 import SelfieGrid from "./components/SelfieGrid";
 import SectionLabel from "./components/common/SectionLabel";
+import FloatingRSVP from "./components/common/FloatingRSVP";
 
 export default function App() {
   const [revealed, setRevealed] = useState(false);
@@ -56,7 +57,7 @@ export default function App() {
             <JacobTaughtUs />
             <div className="divider" />
             <SupportItsMe />
-            <div className="divider" />
+            <div className="divider" id="rsvp-section" />
             <section className="rsvp-wrap">
               <SectionLabel eyebrow="RSVP" title="Will You Be There?" />
               <div className="rsvp-inner">
@@ -65,6 +66,7 @@ export default function App() {
             </section>
             <div className="divider" />
             <SelfieGrid />
+            <FloatingRSVP />
           </motion.main>
         )}
       </AnimatePresence>

@@ -1,0 +1,42 @@
+.btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  background: var(--blue);
+  color: var(--yellow);
+  border: 2px solid var(--yellow);
+  border-radius: 50px;
+  padding: 14px 22px;
+  font-family: 'Playpen Sans', cursive;
+  font-size: clamp(12px, 3vw, 14px);
+  font-weight: 700;
+  cursor: pointer;
+  max-width: clamp(200px, 70vw, 280px);
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(26, 35, 126, 0.25);
+  overflow: hidden;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  background: var(--yellow);
+  color: var(--blue);
+}
+
+.label {
+  display: block;
+  white-space: nowrap;
+}
+
+@media (max-width: 380px) {
+  .btn {
+    bottom: 16px;
+    right: 16px;
+    left: 16px;
+    max-width: 100%;
+  }
+}
