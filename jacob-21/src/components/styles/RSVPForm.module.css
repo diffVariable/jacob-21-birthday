@@ -84,3 +84,25 @@
   color: var(--muted);
   line-height: 1.7;
 }
+
+loadingText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.dots {
+  animation: blink 1s ease infinite;
+  letter-spacing: 2px;
+}

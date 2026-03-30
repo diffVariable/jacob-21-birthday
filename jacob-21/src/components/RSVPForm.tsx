@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./styles/RSVPForm.module.css";
+import { useSubmitRSVP } from "./hooks/useRSVP";
+import confetti from "canvas-confetti";
 
 interface IFormState {
   full_name: string;
@@ -19,9 +21,9 @@ const INITIAL_FORM: IFormState = {
 
 export default function RSVPForm() {
   const [form, setForm] = useState<IFormState>(INITIAL_FORM);
-  const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
+  const [validationError, setValidationError] = useState("");
+
+  const { mutate, isPending, isSuccess, isError, error } = useSubmitRSVP();
 
   const update =
     (field: keyof IFormState) =>
@@ -31,27 +33,42 @@ export default function RSVPForm() {
       >,
     ) => {
       setForm((prev) => ({ ...prev, [field]: e.target.value }));
-      if (error) setError("");
+      if (error) setValidationError("");
     };
 
   const handleSubmit = async () => {
     if (!form.full_name.trim()) {
-      setError("Please enter your full name!");
+      setValidationError("Please enter your full name!");
       return;
     }
     if (!form.attending) {
-      setError("Please let us know if you can attend!");
+      setValidationError("Please let us know if you can attend!");
       return;
     }
 
-    setLoading(true);
-    setError("");
+    mutate({
+      full_name: form.full_name.trim(),
+      attending: form.attending,
+      guests: form.guests ? parseInt(form.guests) : null,
+      paw_patrol_character: form.paw_patrol_character || null,
+      message: form.message.trim() || null,
+    });
 
-    setSubmitted(true);
-    setLoading(false);
+    setValidationError("");
   };
 
-  if (submitted && form.attending === "yes") {
+  useEffect(() => {
+    if (isSuccess) {
+      confetti({
+        particleCount: 120,
+        spread: 80,
+        origin: { y: 0.8 },
+        colors: ["#ffd54f", "#1a237e", "#f5e1da", "#ffffff"],
+      });
+    }
+  }, [isSuccess]);
+
+  if (isSuccess && form.attending === "yes") {
     return (
       <div className={styles.success}>
         <div className={styles.successIcon}>✅</div>
@@ -59,7 +76,7 @@ export default function RSVPForm() {
         <p className={styles.successSub}>Jacob can't wait to see you.</p>
       </div>
     );
-  } else if (submitted && form.attending === "no") {
+  } else if (isSuccess && form.attending === "no") {
     return (
       <div className={styles.success}>
         <div className={styles.successIcon}>😢</div>
@@ -68,10 +85,10 @@ export default function RSVPForm() {
       </div>
     );
   }
-
   return (
     <div className={styles.form}>
-      {error && <p className={styles.error}>{error}</p>}
+      {validationError && <p className={styles.error}>{validationError}</p>}
+      {isError && error && <p className={styles.error}>{error.message}</p>}
 
       <div className={styles.field}>
         <div className="field-label">Your Full Name</div>
@@ -137,9 +154,16 @@ export default function RSVPForm() {
       <button
         className={styles.submitBtn}
         onClick={handleSubmit}
-        disabled={loading}
+        disabled={isPending}
       >
-        {loading ? "Sending... " : "Send My RSVP"}
+        {isPending ? (
+          <span className={styles.loadingText}>
+            Sending your RSVP
+            <span className={styles.dots}>...</span>
+          </span>
+        ) : (
+          "Send My RSVP"
+        )}
       </button>
     </div>
   );
